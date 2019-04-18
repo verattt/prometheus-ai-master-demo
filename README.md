@@ -7,7 +7,8 @@ Prometheus AI model, containing the following layers:
 * [Expert System (ES)](src/main/java/es)
 * [Meta Reasoner (META)](src/main/java/meta)
 
-The NN and META are basic skeletons at this point.
+KNN and ES are from https://github.com/seanstappas/prometheus-ai?fbclid=IwAR2q5SNaortQrS06ogwDBn0KjsnqgDgvVbHl1PlAl8bXPw8BtNL8cNRCNdY
+The META are edited from http://github.com/RushQL/DP_Meta/trhttps://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa/online-outside.htmlee/master/src/DP/META
 
 ![knn_graph](graphs/knn/knn_new.png)
 
