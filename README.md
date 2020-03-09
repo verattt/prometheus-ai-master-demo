@@ -7,14 +7,15 @@ Prometheus AI model, containing the following layers:
 * [Expert System (ES)](src/main/java/es)
 * [Meta Reasoner (META)](src/main/java/meta)
 
+The first layer NN and simulator environment are fully start from scratch in order to test this machine in virtual environment. The report can be find [here](https://github.com/verattt/prometheus-ai-master-demo/blob/master/Final_Report.pdf). The demo showing in report can be find by compiling and running demo.java in src/main/java/demo.java.
+
 The orignal skeleton of the project and layers of KNN and ES are from https://github.com/seanstappas/prometheus-ai?fbclid=IwAR2q5SNaortQrS06ogwDBn0KjsnqgDgvVbHl1PlAl8bXPw8BtNL8cNRCNdY
 
-The META are edited from http://github.com/RushQL/DP_Meta/trhttps://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa/online-outside.htmlee/master/src/DP/META
+The META ideas are from http://github.com/RushQL/DP_Meta/trhttps://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa/online-outside.htmlee/master/src/DP/META, mostly changed because of the change of objectives.
 
-![knn_graph](graphs/knn/knn_new.png)
 
 ## Background
-For a basic overview of the theory and design behind Prometheus, see the reports provided in the [`reports` directory](reports). For further background on the theory of Prometheus, contact [Prof. Vybihal](http://www.cs.mcgill.ca/~jvybihal/).
+For a basic overview of the theory and design behind Prometheus, see the reports provided in the [`reports` directory](reports) for each layer's initial design. For further background on the theory of Prometheus, contact [Prof. Vybihal](http://www.cs.mcgill.ca/~jvybihal/).
 
 ## Dependencies
 ### Java 8
