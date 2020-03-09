@@ -7,7 +7,7 @@ Prometheus AI model, containing the following layers:
 * [Expert System (ES)](src/main/java/es)
 * [Meta Reasoner (META)](src/main/java/meta)
 
-The first layer NN and simulator environment are fully start from scratch in order to test this machine in virtual environment. The report can be find [here](https://github.com/verattt/prometheus-ai-master-demo/blob/master/Final_Report.pdf). The demo showing in report can be find by compiling and running demo.java in src/main/java/demo.java.
+The first layer NN and simulator environment are fully start from scratch in order to test this machine in virtual environment. The report can be find [here](https://github.com/verattt/prometheus-ai-master-demo/blob/master/Final_Report.pdf). The demo showing in report can be find by compiling and running[`demo.java `](src/main/java/demo.java)
 
 The orignal skeleton of the project and layers of KNN and ES are from https://github.com/seanstappas/prometheus-ai?fbclid=IwAR2q5SNaortQrS06ogwDBn0KjsnqgDgvVbHl1PlAl8bXPw8BtNL8cNRCNdY
 
