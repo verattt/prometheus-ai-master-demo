@@ -16,7 +16,7 @@ import tags.Tuple;
 /**
  * Implementation of the ES.
  */
-class ExpertSystemImpl implements ExpertSystem, LayerInput, LayerOutput,Thinking {
+class ExpertSystemImpl implements ExpertSystem, LayerInput,Thinking{
     private final Thinker thinker;
     private final Teacher teacher;
     private final Rester rester;
@@ -24,7 +24,7 @@ class ExpertSystemImpl implements ExpertSystem, LayerInput, LayerOutput,Thinking
     private final Set<Rule> activeRules;
     private final Set<Fact> facts;
     private final Set<Recommendation> recommendations;
-    private List<Tuple> input;
+    private Set<Tag> input;
     private List<Tuple> output;
 
     @Inject
@@ -62,6 +62,7 @@ class ExpertSystemImpl implements ExpertSystem, LayerInput, LayerOutput,Thinking
                                      final int numberOfCycles) {
         return thinker.think(generateRule, numberOfCycles);
     }
+
 
     @Override
     public void teach(final String sentence) {
@@ -153,34 +154,45 @@ class ExpertSystemImpl implements ExpertSystem, LayerInput, LayerOutput,Thinking
 
     @Override
     public void recieveDataStream(List<Tuple> x) {
+        this.input = new HashSet<>();
+        for(Tuple a: x){
+            if(a instanceof Tag){
+                input.add((Tag)a);
+            }
+        }
 
     }
 
-    @Override
-    public void sendDataStream(List<Tuple> x) {
-
-    }
 
 
 
-    public Iterator<Tuple> iterator()
+    public Iterator<Tag> iterator()
     {
         return input.iterator();
+    }
+    public List<Tuple> thinkG(int iteration, List<Tuple> tuples){
+        Set<Tag> output =new HashSet<>();
+        for(Tuple a: tuples){
+            if(a instanceof Tag){
+                output.add((Tag)a);
+            }
+        }
+        addTags(output);
+        Set<Recommendation> x =think();
+        if(x!=null){
+        List<Tuple> rec = new ArrayList<>(x);
+            return rec;
+        }
+        return null;
     }
 
     @Override
     public List<Tuple> think(int iterate, List<Tuple> tuples) {
-        List<Tuple> output =  new ArrayList<>();
-        //todo add activeTags
-        Set<Tag> activeTags =  new HashSet<Tag>();
-        addTags(activeTags);
-        think();
-        for(Tuple t:tuples){
-            if(t instanceof Recommendation){
-                output.add(t);
-            }
-        }
-        return output;
+        reset();
+        recieveDataStream(tuples);
+       addTags(input);
+        List<Tuple> rec =new ArrayList<>(getRecommendations());
+        return rec;
     }
 //    @Override
 //    public Tuple firstTuple() {

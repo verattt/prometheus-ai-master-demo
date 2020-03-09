@@ -48,6 +48,7 @@ public interface ExpertSystem {
      */
     Set<Recommendation> think(boolean generateRule, int numberOfCycles);
     List<Tuple> think(int iterations, List<Tuple> input);
+    List<Tuple> thinkG(int iterations, List<Tuple> input);
 
     /**
      * Generates rules from a natural language sentence
