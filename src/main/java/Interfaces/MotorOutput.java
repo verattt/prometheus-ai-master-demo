@@ -1,6 +1,10 @@
 package Interfaces;
 
+import nn.Action;
+
+import java.util.List;
+
 public interface MotorOutput {
-    void sendCommand(String motor, String command);
+    void takeAction(List<Action> recommended);
 }
 
