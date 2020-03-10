@@ -9,9 +9,9 @@ Prometheus AI model, containing the following layers:
 
 The first layer NN and simulator environment are fully start from scratch in order to test this machine in virtual environment. The report can be find [here](https://github.com/verattt/prometheus-ai-master-demo/blob/master/Final_Report.pdf). The demo showing in report can be find by compiling and running[`demo.java `](src/main/java/demo.java)
 
-The orignal skeleton of the project and layers of KNN and ES are from https://github.com/seanstappas/prometheus-ai?fbclid=IwAR2q5SNaortQrS06ogwDBn0KjsnqgDgvVbHl1PlAl8bXPw8BtNL8cNRCNdY
+The orignal skeleton of the project and layers of KNN and ES are from https://github.com/seanstappas/
 
-The META ideas are from http://github.com/RushQL/DP_Meta/trhttps://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa/online-outside.htmlee/master/src/DP/META, mostly changed because of the change of objectives.
+The META ideas are from http://github.com/RushQL/DP_Meta/, mostly changed because of the change of objectives.
 
 
 ## Background
